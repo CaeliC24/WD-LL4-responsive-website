@@ -9,7 +9,269 @@
 </head>
 
 <body>
-  Hello world
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nomadiq Travel Destinations</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f9f6f1;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #d7f0eb;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0.5rem 0 0.75rem;
+      color: #236e6d;
+      letter-spacing: 1.2px;
+    }
+
+    .site-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      color: #236e6d;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      background-color: #b9d8c2;
+      color: #1a4e46;
+      outline: none;
+    }
+
+    /* Responsive header nav */
+    @media (min-width: 600px) {
+      .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1rem 3rem;
+      }
+
+      .logo {
+        font-size: 2.4rem;
+        margin: 0;
+      }
+
+      .site-nav ul {
+        flex-direction: row;
+        margin: 0;
+      }
+
+      .site-nav li {
+        margin-left: 2.5rem;
+      }
+
+      .site-nav a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #e3f2f9; /* soft sky blue */
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: #236e6d; /* muted ocean teal */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 320px;
+      box-sizing: border-box;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1.4px;
+      line-height: 1.1;
+      font-weight: 700; /* bolder */
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 620px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.75;
+      padding: 0 1rem;
+      font-weight: 600; /* bolder */
+    }
+
+    .hero button {
+      background-color: #b9d8c2; /* gentle moss green */
+      color: #236e6d;
+      border: none;
+      padding: 0.9rem 3rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-radius: 28px;
+      cursor: pointer;
+      transition: background-color 0.35s ease, color 0.35s ease, transform 0.2s ease;
+      font-family: 'Quicksand', sans-serif;
+      box-shadow: 0 4px 6px rgba(34, 50, 44, 0.15);
+    }
+
+    .hero button:hover,
+    .hero button:focus {
+      background-color: #236e6d;
+      color: #f9f6f1;
+      outline: none;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(34, 50, 44, 0.3);
+    }
+
+    /* About Section */
+    .about {
+      background-color: #f9f6f1; /* warm driftwood beige */
+      padding: 4rem 2rem;
+      max-width: 820px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: 1.1px;
+      line-height: 1.1;
+    }
+
+    .about p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      padding: 0 1rem;
+      color: #2c3e50cc;
+    }
+
+    /* Responsive image example */
+    img.responsive-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem auto 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Media Queries for screens 600px and wider */
+    @media (min-width: 600px) {
+      /* Header */
+      .site-header {
+        padding: 1rem 4rem;
+      }
+
+      .site-nav li {
+        margin-left: 2.5rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 5rem 3rem 6rem;
+        min-height: 420px;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        padding: 0;
+      }
+
+      .hero button {
+        font-size: 1.3rem;
+        padding: 1rem 3.5rem;
+      }
+
+      /* About Section */
+      .about {
+        padding: 5rem 4rem;
+      }
+
+      .about h3 {
+        font-size: 3rem;
+      }
+
+      .about p {
+        font-size: 1.25rem;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">🌿 Nomadiq Travel Destinations</h1>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Explore Sustainable Travel</h2>
+    <p>Discover eco-friendly destinations and travel tips that help preserve our planet while creating unforgettable adventures.</p>
+    <button type="button" onclick="alert('Let’s start planning your trip!')">Plan Your Trip</button>
+    <img
+      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+      alt="Beautiful eco travel destination with green hills and blue sky"
+      class="responsive-img"
+    />
+  </section>
+
+  <section class="about">
+    <h3>About Nomadiq Travel Destinations</h3>
+    <p>
+      At Nomadiq Travel Destinations, we are passionate about promoting eco-friendly travel experiences that connect you with nature while protecting our planet. We carefully curate sustainable trips that prioritize local communities and environmental stewardship.
+    </p>
+  </section>
+</body>
+</html>
+
   <script src="script.js"></script>
 </body>
 
